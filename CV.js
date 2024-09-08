@@ -59,3 +59,5 @@ window.addEventListener('scroll', function() {
             var audio = document.getElementById('background-music');
             if (audio.paused) {
                 audio.play();
+            }
+        });
