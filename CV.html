@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV</title>
+    <meta name="description" content="Trofim Garaba's CV showcasing skills, experience, and education.">
+    <meta name="keywords" content="CV, Resume, Trofim Garaba, Skills, Experience, Education">
+    <meta name="author" content="Trofim Garaba">
+    <link rel="stylesheet" href="CV.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+   
+</head>
+<body>
+    <div id="progress-bar"></div>
+    <div class="control-buttons">
+        <button id="music-toggle" aria-label="Toggle Music"><i class="fas fa-music"></i> Pause Music</button>
+        <button id="dark-mode-toggle" aria-label="Toggle Dark Mode"><i class="fas fa-adjust"></i> Dark Mode</button>
+    </div>
+    <header>
+        <nav aria-label="Main Navigation">
+            <ul>
+                <li><a href="#about"><i class="fas fa-user"></i> About</a></li>
+                <li><a href="#experience"><i class="fas fa-briefcase"></i> Experience</a></li>
+                <li><a href="#skills"><i class="fas fa-cogs"></i> Skills</a></li>
+                <li><a href="#education"><i class="fas fa-graduation-cap"></i> Education</a></li>
+                <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="hero">
+        <h1>Trofim Garaba</h1>
+        <p>I am the one who you need.</p>
+        <img src="IMG_00553.jpg" alt="Trofim Garaba" class="hero-image">
+    </section>
+    <section id="about">
+        <h2>About Me</h2>
+        <p>As a dedicated and hardworking professional, I bring a strong work ethic and a commitment to excellence in every task I undertake. My ability to consistently deliver high-quality results, even under tight deadlines, is a testament to my perseverance and dedication. I thrive in dynamic environments and am always eager to take on new challenges, continuously seeking opportunities to learn and grow. My proactive approach and attention to detail ensure that I not only meet but exceed expectations, making me a valuable asset to any team.</p>
+    </section>
+    <section id="experience">
+        <h2>Experience</h2>
+        <ul>
+            <li>
+                <h3>Deli Worker</h3>
+                <p>Centra</p>
+                <p>August-2023 - Present</p>
+                <p>As a deli worker, I prepare and serve a variety of meats, cheeses, and sandwiches to customers. I slice products to order, maintain the cleanliness of the deli area, and ensure everything is stocked and fresh. I also interact with customers, take their orders, and handle payments. It’s a fast-paced job, but I enjoy helping people find what they need and providing great service.</p>
+            </li>
+        </ul>
+    </section>
+    <section id="skills">
+        <h2>Skills</h2>
+        <canvas id="skillsChart"></canvas>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script>
+            new Chart(document.getElementById('skillsChart').getContext('2d'), {
+                type: 'bar',
+                data: {
+                    labels: ['Communication', 'Teamwork', 'Problem-Solving', 'Time Management', 'Adaptability', 'Leadership', 'Creativity', 'Attention to Details', 'Ethical Work' ],
+                    datasets: [{ label: 'Skill Level', data: [90, 85, 80, 75, 88, 77, 99, 90, 55], backgroundColor: 'rgba(51, 122, 183, 0.6)' }]
+                },
+                options: { scales: { y: { beginAtZero: true, max: 100 } } }
+            });
+        </script>
+    </section>
+    <section id="education">
+        <h2>Education</h2>
+        <ul>
+            <li>
+                <h3>Degree</h3>
+                <p>Theoretical High School: "Mihai Eminescu"</p>
+                <p>2020-2023</p>
+            </li>
+        </ul>
+    </section>
+    <section id="contact">
+        <h2>Get in Touch</h2>
+        <button id="contact-button">Contact Me</button>
+        <div id="contact-modal" class="modal" role="dialog" aria-hidden="true">
+            <div class="modal-content">
+                <span class="close" aria-label="Close modal">&times;</span>
+                <h3>Contact Information</h3>
+                <p>Email:  trofimgaraba@gmail.com </p>
+                <p>Phone: <a href="tel:+353 89 425 0376">+353 89 425 0376</a></p>
+                <p>Feel free to reach out!</p>
+            </div>
+        </div>
+    </section>
+    <audio id="background-music" src="paganini.mp3" loop></audio>
+    <script src="CV.js"></script>
+</body>
+</html>
