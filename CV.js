@@ -53,18 +53,9 @@ const observer = new IntersectionObserver(entries => {
 
 document.querySelectorAll('section').forEach(section => observer.observe(section));
 
-// Music control
-const backgroundMusic = document.getElementById("background-music");
-backgroundMusic.play();
-let isPlaying = true;
-document.getElementById("music-toggle").addEventListener('click', () => {
-    isPlaying ? backgroundMusic.pause() : backgroundMusic.play();
-    document.getElementById("music-toggle").textContent = isPlaying ? "Play Music" : "Pause Music";
-    isPlaying = !isPlaying;
-});
 
-// Dark mode toggle
-document.getElementById("dark-mode-toggle").addEventListener('click', () => {
-    document.body.classList.toggle('dark-mode');
-    header.classList.toggle('dark-mode');
-});
+
+window.addEventListener('scroll', function() {
+            var audio = document.getElementById('background-music');
+            if (audio.paused) {
+                audio.play();
